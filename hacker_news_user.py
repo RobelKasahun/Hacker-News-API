@@ -6,12 +6,13 @@ def is_comments(comment):
         comment = int(comment)
     except Exception as exception:
         comment = "discuss"
-        
+
     if isinstance(comment, int):
         return f"{comment} comments" if comment > 1 else f"{comment} comment"
     return comment
 
 
+# single hacker news post
 def get_hacker_news_user(
     title, user_url, user_url_link, post_link, vote, author, timestamp, comment
 ):
@@ -30,6 +31,7 @@ def get_hacker_news_user(
     return hacker_news
 
 
+# hacker news users and their posts
 def get_hacker_news_users(
     titles,
     users_urls,
